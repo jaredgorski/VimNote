@@ -1,0 +1,36 @@
+#!/bin/bash
+
+function vn() {
+  if [[ $# -eq 0 ]] # Handle empty command
+  then
+    if [[ -a "$HOME/.VimNote/usr/vimnotes/notes.md" ]]
+    then
+      vim "$HOME/.VimNote/usr/vimnotes/notes.md"  
+    else
+      mkdir -p $HOME/.VimNote/usr/vimnotes
+      touch $HOME/.VimNote/usr/vimnotes/notes.md
+      chmod 666 $HOME/.VimNote/usr/vimnotes/notes.md
+      echo "\n[//]: <> (this document contains the VimNotes of $USER)\n\n" > $HOME/.VimNote/usr/vimnotes/notes.md
+      vim "$HOME/.VimNote/usr/vimnotes/notes.md"
+    fi
+  elif [[ $1 = "-u" ]] # Update git remote notes.md
+  then
+    source $HOME/.VimNote/lib/scm.sh
+    updateRemote
+  elif [[ $1 = "-s" ]] || [[ $1 = "--set-remote" ]] # Change git remote url
+  then
+    source $HOME/.VimNote/lib/scm.sh
+    setRemote
+  elif [[ $1 = "uninstall" ]] # Uninstall VimNote
+  then
+    source $HOME/.VimNote/lib/uninstall.sh
+    uninstallVimNote
+  elif [[ $1 = "-h" ]] || [[ $1 = "--h" ]] || [[ $1 = "-help" ]] || [[ $1 = "--help" ]] # Show help screen
+  then
+    source $HOME/.VimNote/lib/help.sh
+    showHelp
+  else
+    echo "\n\tYou said: $1\n"
+    echo "\tDid you mean \`vn --help\`?\n"
+  fi
+}
