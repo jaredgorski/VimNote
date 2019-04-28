@@ -5,21 +5,21 @@ Pretty basic notetaking in Vim
 
 ![](https://raw.githubusercontent.com/jaredgorski/VimNote/master/.media/vn_screenshot.png)
 
-# Manna (what is it)
+# 🥠 Manna (what is it)
 I don't like frills and I don't like leaving my terminal if I don't have to, and I made this little script for myself, so it doesn't have frills and it doesn't interfere with terminal happiness. What it does do is provide a simple and easily-accessible notebook with no opinion on how it should be used, except that it should definitely be edited in Vim. 
 
 It also provides easy (and wonderfully basic) version control via git, with timestamped commits matching each `vn -u` update you make. This means you'll always have older versions available, and you'll always know the exact time your thought process led you to write anything.
 
 I personally use this to organize my thoughts at the beginning and end of each day, like a basic planner with shotgun notes and sundry scratch. This fits my confused, left/right brained, type A/B "flow" perfectly.
 
-# Installation
+# 🍺 Installation
 1) Clone this repository to your computer
 2) Navigate to the resulting directory
 3) Run `./install.sh`
 4) Open a new terminal session
 5) Run `vn`
 
-### What you get:
+### 🚽 What you get:
 - One `notes.md` file
 - Optional version control on said `notes.md` file
     - *Beware of merge conflicts; there is no dedicated conflict management here*
@@ -27,7 +27,7 @@ I personally use this to organize my thoughts at the beginning and end of each d
 
 You probably won't find this useful at all. But if you do, here's all you need to know:
 
-# Usage
+# 📝 Usage
 
 1) If you wish to use the `vn -u` command to implement version control, create an online git repository to store your notes. I use a private GitHub repository, aptly named "notes".
     - Set this repository as a remote in VimNote by using `vn -s` and the accompanying flow. 
