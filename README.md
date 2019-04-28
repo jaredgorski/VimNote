@@ -29,7 +29,7 @@ You probably won't find this useful at all. But if you do, here's all you need t
 
 # Usage
 
-1) If you wish to use the `vn -u` command to implement version control, create an online git repository to store your notes.   
+1) If you wish to use the `vn -u` command to implement version control, create an online git repository to store your notes. I use a private GitHub repository, aptly named "notes".
     - Set this repository as a remote in VimNote by using `vn -s` and the accompanying flow. 
     - You can also do this manually by finding either `<your-VimNote-install-folder>/usr/vimnotes` or the symlinked folder VimNote created to store your `notes.md` file (`~/.VimNote/usr/vimnotes` by default) and configuring your git remote manually. This remote should be named `vimnotes`.
 2) Use the `vn` command to open `notes.md`.
